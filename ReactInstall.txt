@@ -1,0 +1,42 @@
+Documentação Next.JS: https://nextjs.org/docs/getting-started
+Material Design: https://m3.material.io/components
+
+Styled-Components: https://styled-components.com
+Para baixar o styled componets
+-- npm install styled-components
+
+Vercel Next.JS
+https://github.com/vercel/next.js/tree/canary/examples
+
+No package.json retirar os "^" para evitar atualizações das dependências.
+
+{
+  "dependencies": {
+    "next": "13.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
+
+Importar os scripts e criar uma pasta "pages"
+
+"scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  }
+
+Colocar o primeiro componente
+Index.js
+
+function HomePage() {
+    return (
+        <div>Bem vindo ao AluraTube!</div>
+    )
+}
+
+export default HomePage
+
+Para iniciar o ambiente dev
+-- npm run dev
