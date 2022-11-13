@@ -1,3 +1,4 @@
+import React from 'react';
 import config from "../config.json";
 import styled from "styled-components";
 import { CSSReset } from "../source/components/CSSReset"
@@ -5,22 +6,35 @@ import Menu from "../source/components/Menu";
 import { StyledTimeline } from "../source/components/Timeline";
 
 function HomePage() {
-    const styleHomePage = {
-        //backgroundColor: "red"
-    };
+    const StyleHomePage = styled.div`
+    .titleHomePage{
+        margin-top: 15px;
+        font-weight: bold;
+        margin-left: 30px;
+        font-size: 22px;
+    }
+    `
+    const StyleConteudo = styled.div`
+        background-color: rgba(79, 220, 255, 0.30);
+        margin-right: 10px; margin-left: 10px;
+    `;
 
+    const [valorDoFiltro, setvalorDoFiltro] = React.useState("");
     //console.log(config.playlist);
 
     return (
         <>
             <CSSReset/>
-            <div style={styleHomePage}>
-                <Menu />
-                <Header />
-                <Timeline playlist={config.playlist}>
-                    Conteúdo
-                </Timeline>
-            </div>
+            <StyleHomePage>
+                <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setvalorDoFiltro}/>
+                <StyleConteudo>
+                    <Header />
+                    <p className='titleHomePage'>Genshin Impact</p>
+                    <Timeline searchValue={valorDoFiltro} playlist={config.playlist}>
+                        Conteúdo
+                    </Timeline>
+                </StyleConteudo>
+            </StyleHomePage>
         </>
     )
 }
@@ -36,41 +50,83 @@ export default HomePage
 } */
 
 const StyleHeader = styled.div`
-    img{
-        width: 80px;
-        height: 80px;
+    .githubProfile{
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
     }
+
+    .banner{
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        left: 0px;
+        top: 56px;
+        background: url(.jpg);
+    }
+
     .user-info{
-        margin-top: 50px;
+        margin-top: 15px;
         display: flex;
         align-items: center;
         width: 100%;
         padding: 16px 32px;
         gap: 16px;
     }
+    .informacoes{
+        display: flex;
+    }
+
+    p{
+        font-size: 20px;
+        margin-left: 15px;
+    }
+
+    .titleProfile{
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .infoGithub{
+        margin: auto;
+        align-items: center;
+    }
+    .link-item {
+        padding: 0.12em 0.35em;
+        border: 0.5px solid white;
+        border-radius: 50%;
+        color: white;
+}
 `;
+
+const StyledBanner = styled.div`
+	background-image: url(${({ bg }) => bg});
+	background-size: cover;
+	height: 330px;
+`
 
 function Header() {
     return (
         <StyleHeader>
-            {/* <img src="banner"/> */}
+            <StyledBanner bg={config.banner} />
             <section className="user-info">
-                <img src={`https://github.com/${config.github}.png`} />
-                <div>
-                    <h2>
-                        {config.name}
-                    </h2>
-                    <p>
-                        {config.job}
-                    </p>
+                <div className="informacoes">
+                    <img className="githubProfile" src={`https://github.com/${config.github}.png`} />
+                        <div className="infoGithub">
+                            <p className="titleProfile">
+                                {config.name}
+                            </p>
+                            <p>
+                                {config.job}
+                            </p>
+                        </div>
                 </div>
             </section>
         </StyleHeader>
     )
 }
 
-function Timeline(props) {
+function Timeline({searchValue, ...props}) {
     //console.log("Props", props.playlist);
     const playlistName = Object.keys(props.playlist);
 
@@ -80,19 +136,25 @@ function Timeline(props) {
                 const videos = props.playlist[playlistName];
                 console.log(videos);
                 return (
-                    <section>
+                    <section key={playlistName}>
                         <h2>{playlistName}</h2>
                         <div>
-                            {videos.map((video) => {
-                                return (
-                                    <a href={video.url}>
-                                        <img src={video.thumb} />
-                                        <span>
-                                            {video.title}
-                                        </span>
-                                    </a>
-                                )
-                            })}
+                            {videos
+                                .filter((video) => {
+                                    const titleNormalized = video.title.toLowerCase();
+                                    const searchValueNormalized = searchValue.toLowerCase();
+                                    return titleNormalized.includes(searchValueNormalized)
+                                })
+                                .map((video) => {
+                                    return (
+                                        <a key={video.url} href={video.url}>
+                                            <img src={video.thumb} />
+                                            <span>
+                                                {video.title}
+                                            </span>
+                                        </a>
+                                    )
+                                })}
                         </div>
                     </section>
                 )
