@@ -2,7 +2,7 @@ import React from 'react';
 import config from "../config.json";
 import styled from "styled-components";
 import { CSSReset } from "../source/components/CSSReset"
-import Menu from "../source/components/Menu";
+import Menu from "../source/components/Menu/Index";
 import { StyledTimeline } from "../source/components/Timeline";
 
 function HomePage() {
