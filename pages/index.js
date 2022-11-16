@@ -5,6 +5,9 @@ import Menu from "../source/components/Menu/Index";
 import { StyledTimeline } from "../source/components/Timeline";
 
 function HomePage() {
+    const [valorDoFiltro, setvalorDoFiltro] = React.useState("");
+    //console.log(config.playlist);
+    
     const StyleHomePage = styled.div`
     .titleHomePage{
         margin-top: 15px; margin-bottom: 15px;
@@ -21,8 +24,7 @@ function HomePage() {
         margin-right: 2px; margin-left: 2px;
     `;
 
-    const [valorDoFiltro, setvalorDoFiltro] = React.useState("");
-    //console.log(config.playlist);
+    
 
     return (
         <>
