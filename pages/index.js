@@ -1,22 +1,24 @@
 import React from 'react';
 import config from "../config.json";
 import styled from "styled-components";
-import { CSSReset } from "../source/components/CSSReset"
 import Menu from "../source/components/Menu/Index";
 import { StyledTimeline } from "../source/components/Timeline";
 
 function HomePage() {
     const StyleHomePage = styled.div`
     .titleHomePage{
-        margin-top: 15px;
+        margin-top: 15px; margin-bottom: 15px;
         font-weight: bold;
         margin-left: 30px;
         font-size: 22px;
     }
     `
     const StyleConteudo = styled.div`
-        background-color: rgba(79, 220, 255, 0.30);
-        margin-right: 10px; margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        background-color: ${({ theme }) => theme.backgroundLevel1};
+        margin-right: 2px; margin-left: 2px;
     `;
 
     const [valorDoFiltro, setvalorDoFiltro] = React.useState("");
@@ -24,7 +26,6 @@ function HomePage() {
 
     return (
         <>
-            <CSSReset/>
             <StyleHomePage>
                 <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setvalorDoFiltro}/>
                 <StyleConteudo>
@@ -39,17 +40,21 @@ function HomePage() {
     )
 }
 
-export default HomePage
-
-/* function Menu() {
-    return (
-        <div>
-            Menu
-        </div>
-    )
-} */
-
 const StyleHeader = styled.div`
+    background-color: ${({ theme }) => theme.backgroundLevel1};
+    color: ${({ theme }) => theme.textColorBase};
+    .user-info {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 16px 32px;
+        gap: 16px;
+        & .user-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        }
+    }
     .githubProfile{
         width: 100px;
         height: 100px;
@@ -162,3 +167,5 @@ function Timeline({searchValue, ...props}) {
         </StyledTimeline>
     )
 }
+
+export default HomePage

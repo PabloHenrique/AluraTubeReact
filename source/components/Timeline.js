@@ -27,11 +27,13 @@ export const StyledTimeline = styled.div`
   margin-bottom: 60px;
   padding: 16px;
   overflow: hidden;
+  background-color: ${({ theme }) => theme.backgroundBase};
   border-radius: 0px 0px 15px 15px;
   h2 {
     font-size: 20px;
     margin-bottom: 16px;
     text-transform: capitalize;
+    color: ${({ theme }) => theme.textColorBase}
   }
   img {
     aspect-ratio: 16/9;
@@ -66,6 +68,7 @@ export const StyledTimeline = styled.div`
           display: block;
           padding-right: 24px;
           padding-bottom: 8px;
+          color: ${({ theme }) => theme.textColorBase};
         }
       }
     }

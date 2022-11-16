@@ -1,5 +1,5 @@
 {
-    "banner": "https://initiate.alphacoders.com/images/112/cropped-1600-300-1123013.jpg?3482",
+    "banner": "https://i.imgur.com/CcI619W.jpg",
     "name": "Pablo Henrique",
     "job": "System Analist",
     "github": "pablohenrique",
@@ -98,10 +98,56 @@
                 "thumb": "https://img.youtube.com/vi/tsPtGG9pFfg/hqdefault.jpg"
             },
             {
-                "title": "Xiao: Conquistador de Demônios",
-                "url": "https://www.youtube.com/watch?v=kCmvCpYL34U",
-                "thumb": "https://img.youtube.com/vi/kCmvCpYL34U/hqdefault.jpg"
+                "title": "Qiqi: Talismã da Preservação da Fortuna",
+                "url": "https://www.youtube.com/watch?v=Zuk9kbK1mek",
+                "thumb": "https://img.youtube.com/vi/Zuk9kbK1mek/hqdefault.jpg"
+            },
+            {
+                "title": "Shogun Raiden: Nirvana pelo Trovão",
+                "url": "https://www.youtube.com/watch?v=oBrEFOdSfy8",
+                "thumb": "https://img.youtube.com/vi/oBrEFOdSfy8/hqdefault.jpg"
+            },
+            {
+                "title": "Sangonomiya Kokomi: Marés Reluzentes",
+                "url": "https://www.youtube.com/watch?v=EUrrZCxlkiU",
+                "thumb": "https://img.youtube.com/vi/EUrrZCxlkiU/hqdefault.jpg"
+            },
+            {
+                "title": "Dori: Benefícios Extraordinários",
+                "url": "https://www.youtube.com/watch?v=cSZ2VnM7nio",
+                "thumb": "https://img.youtube.com/vi/cSZ2VnM7nio/hqdefault.jpg"
+            },
+            {
+                "title": "Shenhe: Plumas Geladas Voam Elegantemente",
+                "url": "https://www.youtube.com/watch?v=2ERPBlS-0Is",
+                "thumb": "https://img.youtube.com/vi/2ERPBlS-0Is/hqdefault.jpg"
+            },
+            {
+                "title": "Yelan: Furtividade sem Rastros",
+                "url": "https://www.youtube.com/watch?v=W6-BDI7y-lA",
+                "thumb": "https://img.youtube.com/vi/W6-BDI7y-lA/hqdefault.jpg"
+            },
+            {
+                "title": "Diluc: Alvorecer",
+                "url": "https://www.youtube.com/watch?v=1TfbiDo7N4k",
+                "thumb": "https://img.youtube.com/vi/1TfbiDo7N4k/hqdefault.jpg"
+            },
+            {
+                "title": "Childe: Legado do Mal",
+                "url": "https://www.youtube.com/watch?v=RfTgT81cVxE",
+                "thumb": "https://img.youtube.com/vi/RfTgT81cVxE/hqdefault.jpg"
+            },
+            {
+                "title": "Keqing: Passeio Celestial",
+                "url": "https://www.youtube.com/watch?v=lf_b7_5oAZk",
+                "thumb": "https://img.youtube.com/vi/lf_b7_5oAZk/hqdefault.jpg"
+            },
+            {
+                "title": "Nilou: Ondas de Lótus",
+                "url": "https://www.youtube.com/watch?v=h7WnRJTVReI",
+                "thumb": "https://img.youtube.com/vi/h7WnRJTVReI/hqdefault.jpg"
             }
+
         ],
         "Concertos": [
             {
@@ -138,6 +184,16 @@
                 "title": "Melodies of an Endless Journey",
                 "url": "https://www.youtube.com/watch?v=LrqsaO9Cf2M",
                 "thumb": "https://img.youtube.com/vi/LrqsaO9Cf2M/hqdefault.jpg"
+            },
+            {
+                "title": "Song of Innocence: 2º OST de Inazuma",
+                "url": "https://www.youtube.com/watch?v=O_Udh58C2dM",
+                "thumb": "https://img.youtube.com/vi/O_Udh58C2dM/hqdefault.jpg"
+            },
+            {
+                "title": "Song: Contos da Montanha Nevada",
+                "url": "https://www.youtube.com/watch?v=mAHW2ioE1g4",
+                "thumb": "https://img.youtube.com/vi/mAHW2ioE1g4/hqdefault.jpg"
             }
         ],
         "Discos": [

@@ -14,7 +14,6 @@ const StyledSearch = styled.div`
     width: 84%;
     padding: 4px 6px;
     border: none;
-    border-radius: 100vw 0vw 0vw 100vw;
     outline: none;
     color: ${({ theme }) => theme.textColorBase};
     background-color: ${({ theme }) => theme.backgroundBase};
